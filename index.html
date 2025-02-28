@@ -12,12 +12,15 @@
                 "Home": "http://reeguy.nl"
             };
 
-            const path = window.location.pathname.replace(/^\/+|\/+$/g, ""); // Trim slashes
+
+
+            const path = window.location.pathname.replace(/^\/+|\/+$/g, "").split("/").pop();
+
 
             if (redirects[path]) {
                 window.location.href = redirects[path];
             } else {
-                document.body.innerHTML = "<h1>404 - Not Found</h1>";
+                document.body.innerHTML = "<h1>404 - Page Not Found</h1>";
             }
         });
     </script>
