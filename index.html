@@ -4,28 +4,5 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReeGuy Redirect</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const redirects = {
-                "ssenvixity": "https://soda-arcade.com/invite/Envixity/room",
-                "youtube": "https://www.youtube.com/@reeguy",
-                "home": "https://about.reeguy.com"
-            };
-
-
-
-            const path = window.location.pathname.replace(/^\/+|\/+$/g, "").split("/").pop();
-
-
-            if (redirects[path]) {
-                window.location.href = redirects[path];
-            } else {
-                document.body.innerHTML = "<h1>404 - Page Not Found</h1>";
-            }
-        });
-    </script>
 </head>
-<body>
-    <h1>Redirecting...</h1>
-</body>
 </html>
